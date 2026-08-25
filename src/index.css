@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@import "lenis/dist/lenis.css";
+@import "./styles/base.css";
+
+@theme {
+  --color-espresso: #120c09;
+  --color-umber: #2a1710;
+  --color-coffee: #542b18;
+  --color-caramel: #a96f43;
+  --color-cream: #f2e8d8;
+  --color-beige: #d8c5ac;
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Outfit", "Helvetica Neue", sans-serif;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html {
+  background: #120c09;
+}
+
+body {
+  margin: 0;
+  background: #120c09;
+  color: #f2e8d8;
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #a96f43;
+  color: #120c09;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.label {
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.has-custom-cursor,
+  body.has-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
